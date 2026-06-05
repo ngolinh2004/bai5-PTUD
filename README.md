@@ -35,3 +35,54 @@
      xuất tất cả các container ra file nén.
      xoá mọi container đang chạy
      load lại các container  từ file nén để khôi phục các container đã xoá
+
+    ## BÀI LÀM
+     - lý thuyết: 
+    + docker là gì?
+
+      Docker là một nền tảng mã nguồn mở cho phép đóng gói ứng dụng cùng toàn bộ thư viện, cấu hình và môi trường chạy vào các container. Nhờ đó, ứng dụng có thể hoạt
+
+      động giống nhau trên nhiều môi trường khác nhau như máy cá nhân, máy chủ hoặc cloud, giúp giảm lỗi do khác biệt cấu hình hệ thống.
+      
+    + các keyword được sử dụng trong docker-compose.yml
+      để mô tả 1 service, network, volume,...
+      liệt kê + ý nghĩa của từ khoá đó + ví dụ minh hoạ
+
+      Ví dụ : version: "3.9"
+
+services:
+  web:
+    build: .
+    container_name: myweb
+    ports:
+      - "8000:8000"
+    environment:
+      - DEBUG=True
+    volumes:
+      - .:/app
+    depends_on:
+      - db
+    networks:
+      - backend
+
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: mydb
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: 123456
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    networks:
+      - backend
+
+networks:
+  backend:
+
+volumes:
+  db_data:
+  
+    + ưu điểm khi triển app sử dụng docker là gì?
+    + dùng docker: tạo app, test app OK trên laptop cá nhân
+      giờ muốn triển khai app này trên máy chủ thật ko có internet
+      thì các bước cần làm là?
