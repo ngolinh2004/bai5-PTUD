@@ -173,29 +173,109 @@ volumes:
 
   - thực hành áp dụng: APP MONITOR + ALERT DATA REALTIM
 
-1. Docker Setup 1,2345
-   - Tạo thư mục dự án : mkdir monitor-alert
-     <img width="772" height="344" alt="image" src="https://github.com/user-attachments/assets/21511931-777c-48b0-a18d-22a26b07b297" />
+1. Khởi tạo môi trường Docker Compose
+   - Tạo cấu trúc thư mục dự án
+     <img width="772" height="344" alt="image" src="https://github.com/user-attachments/assets/809557fa-d6d2-442a-a6b6-e32cd6cdb5bb" />
 
-   - Tạo file docker-compose.yml : nano docker-compose.yml
-   - Khởi động hệ thống : docker compose up -d
-   - Kiểm tra container : docker ps
-   - Truy cập Node-RED
-2. Cấu hình Node-RED 6789 10 11 12
-   
-3. MariaDB 13 14 15 
-   
-4. InfluxDB 16 17 18 19 
-   
-5. Grafana 20 21 22 23 24 25 26 
-    
-6. Flask API 27 28 
-    
-7. Frontend + Nginx  29 30 
-    
-8. Telegram Alert 31 32
-    
-9. Backup & Restore 33
-    
+   - Tạo file Docker Compose
+     <img width="722" height="228" alt="image" src="https://github.com/user-attachments/assets/6a50a9ab-cddd-4053-8291-4c4d57fb7261" />
 
-    
+   - Khởi động hệ thống bằng Docker Compose
+     <img width="718" height="176" alt="image" src="https://github.com/user-attachments/assets/b7a47f78-c2e8-4f7f-80e7-a825d64587aa" />
+
+   - Kiểm tra các container đang hoạt động
+     <img width="803" height="1007" alt="image" src="https://github.com/user-attachments/assets/dcad6fbe-204f-4fde-b7b7-b9143809e313" />
+
+2. Xây dựng luồng thu thập dữ liệu bằng Node-RED 
+   - Truy cập giao diện Node-RED
+    <img width="785" height="992" alt="image" src="https://github.com/user-attachments/assets/caef522d-2bb7-43c1-8efc-b64cb248847d" />
+
+   - Tạo luồng lấy dữ liệu thời tiết
+     <img width="789" height="971" alt="image" src="https://github.com/user-attachments/assets/df7167dc-5249-4a3f-b3f8-b40b3083884b" />
+
+   - Kiểm tra dữ liệu từ API thời tiết
+     <img width="940" height="1057" alt="image" src="https://github.com/user-attachments/assets/01712213-a2ae-45b4-bc0a-ed01dd54b52d" />
+
+   - Kiểm tra dữ liệu nhận được trong Node-RED
+     <img width="940" height="1072" alt="image" src="https://github.com/user-attachments/assets/b1ba90df-6b82-4221-8643-46270fbcd60e" />
+
+   - Tạo luồng lưu dữ liệu vào MariaDB
+     <img width="940" height="1070" alt="image" src="https://github.com/user-attachments/assets/edb30f37-cea9-47aa-adb6-f1186a062a96" />
+
+   - Tạo luồng lưu dữ liệu vào InfluxDB
+     <img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/12a002cd-8d7a-49fc-9a10-d1f6750d0ee1" />
+
+3. Lưu trữ dữ liệu thời gian thực bằng MariaDB 
+  - Tạo cơ sở dữ liệu MariaDB
+    <img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/d429608c-7c2b-4808-9364-76b5cd1c6568" />
+
+  - Kiểm tra dữ liệu trong bảng weather
+    <img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/34e3bb86-390d-4360-9b2b-f86c5dc4fa4c" />
+
+4. Lưu trữ dữ liệu lịch sử bằng InfluxDB 
+   - Tạo Organization và Bucket trong InfluxDB
+     <img width="755" height="703" alt="image" src="https://github.com/user-attachments/assets/5238b504-43da-4437-815a-0818598d62e3" />
+
+   - Kiểm tra dữ liệu trong Data Explorer
+     <img width="773" height="717" alt="image" src="https://github.com/user-attachments/assets/c0b0276f-aeda-4f7b-9e69-9e2087d8a300" />
+
+5. Trực quan hóa dữ liệu bằng Grafana 
+   - Cấu hình Data Source cho Grafana
+     <img width="793" height="724" alt="image" src="https://github.com/user-attachments/assets/15ddda05-7560-435e-9235-4612cffff740" />
+
+   - Tạo Dashboard giám sát dữ liệu
+     <img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/1c6ba93a-9261-4469-b331-856defb22156" />
+
+   - Tạo biểu đồ nhiệt độ
+     <img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/5b6377d1-2edc-4efc-a1ed-38f76499102e" />
+
+   - Tạo biểu đồ độ ẩm
+     <img width="940" height="990" alt="image" src="https://github.com/user-attachments/assets/d6000935-3a2d-446e-8af7-d40eda3ab15a" />
+
+
+6. Xây dựng REST API bằng Flask 
+   - Xây dựng API lấy dữ liệu bằng Flask
+     <img width="940" height="877" alt="image" src="https://github.com/user-attachments/assets/a903db7c-c7d3-4a63-8254-0a824773198f" />
+
+   - Kiểm tra API trả về dữ liệu JSON
+     <img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/2e4f3f6a-3131-4233-bce0-a8dcab634b38" />
+
+7. Xây dựng giao diện Web bằng Nginx 
+   - Xây dựng giao diện Web bằng Nginx
+     <img width="940" height="921" alt="image" src="https://github.com/user-attachments/assets/9b771db0-ac2a-4d36-8e86-919da02f84c8" />
+
+   - Cấu hình AJAX lấy dữ liệu thời gian thực
+     <img width="940" height="956" alt="image" src="https://github.com/user-attachments/assets/ef009ae4-0a14-4079-9efa-3845aed50c96" />
+
+   - Hiển thị dữ liệu thời gian thực trên Website
+     <img width="940" height="594" alt="image" src="https://github.com/user-attachments/assets/59c79015-b98e-422b-b7a6-2ad192370fd2" />
+
+   - Nhúng Dashboard Grafana vào Website
+     <img width="940" height="726" alt="image" src="https://github.com/user-attachments/assets/4cd741e5-ba03-4285-96e5-671f644ffdd9" />
+
+8. Cấu hình hệ thống cảnh báo Telegram
+   - Tạo luồng giám sát và phát hiện cảnh báo
+     <img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/e34d80db-56d9-4e26-bb0c-51b660884aca" />
+
+   - Cấu hình Function Node xử lý cảnh báo
+     <img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/84ef380d-1e11-41e4-8bac-e345008e4c76" />
+
+   - Cấu hình Telegram Bot
+     <img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/6115a9fc-9a0e-47bf-9783-bcca7c832087" />
+
+   - Thêm Bot vào nhóm Telegram
+     <img width="940" height="983" alt="image" src="https://github.com/user-attachments/assets/59f5bc6f-cc7c-4830-a5e7-92a0ff17966c" />
+
+   - Kiểm tra cảnh báo vượt ngưỡng (ALERT HIGH)
+   - Kiểm tra cảnh báo dưới ngưỡng (ALERT LOW)
+     <img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/e71abe09-ef95-4263-97ec-6cd51a0f6a07" />
+
+9. Sao lưu và khôi phục hệ thống Docker 
+    - Thực hiện sao lưu Docker Container
+      <img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/dee23b6d-752d-4051-9ca2-98b023515586" />
+
+    - Xóa các Container đang hoạt động
+      <img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/eaf2c836-afc6-4d8a-b56b-8cfc9e89b1b9" />
+
+    - Khôi phục hệ thống từ bản sao lưu
+      <img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/961c32c9-bd12-47f6-8b32-6be462f2014c" />
