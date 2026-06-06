@@ -163,10 +163,17 @@ volumes:
      docker-compose.yml
    
     .env
-
+   
      sang server.
 
     + Bước 7: Chạy ứng dụng
       
       docker compose up -d hoặc docker run -d myapp:v1
     + Bước 8: Kiểm tra
+
+  - thực hành áp dụng: APP MONITOR + ALERT DATA REALTIME
+    <img width="772" height="344" alt="image" src="https://github.com/user-attachments/assets/171dc54f-f0aa-4c56-91d8-7a2f89599588" />
+    <img width="722" height="228" alt="image" src="https://github.com/user-attachments/assets/876fbc76-a41d-4db7-9da5-22a635913714" />
+    <img width="718" height="176" alt="image" src="https://github.com/user-attachments/assets/e95fafb5-dad8-4a12-a395-0eb5f6ca74c1" />
+
+
