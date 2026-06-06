@@ -173,100 +173,29 @@ volumes:
 
   - thực hành áp dụng: APP MONITOR + ALERT DATA REALTIM
 
- 1. <img width="772" height="344" alt="image" src="https://github.com/user-attachments/assets/171dc54f-f0aa-4c56-91d8-7a2f89599588" />
+1. Docker Setup 1,2345
+   - Tạo thư mục dự án : mkdir monitor-alert
+     <img width="772" height="344" alt="image" src="https://github.com/user-attachments/assets/21511931-777c-48b0-a18d-22a26b07b297" />
 
-
-   2.  <img width="722" height="228" alt="image" src="https://github.com/user-attachments/assets/876fbc76-a41d-4db7-9da5-22a635913714" />
-
-
-   3. <img width="718" height="176" alt="image" src="https://github.com/user-attachments/assets/e95fafb5-dad8-4a12-a395-0eb5f6ca74c1" />
-
-
-    4. <img width="803" height="1007" alt="image" src="https://github.com/user-attachments/assets/94b0cba1-1242-4602-a51f-fba50c6648b0" />
-
-
-    5.<img width="785" height="992" alt="image" src="https://github.com/user-attachments/assets/986118e2-44c6-440c-bcb5-b000ca55d7c8" />
-
-
+   - Tạo file docker-compose.yml : nano docker-compose.yml
+   - Khởi động hệ thống : docker compose up -d
+   - Kiểm tra container : docker ps
+   - Truy cập Node-RED
+2. Cấu hình Node-RED 6789 10 11 12
    
-   6. <img width="789" height="971" alt="image" src="https://github.com/user-attachments/assets/6365feff-4aec-4c8b-a9b8-0c9b7f68214b" />
+3. MariaDB 13 14 15 
    
-  7.  <img width="940" height="1057" alt="image" src="https://github.com/user-attachments/assets/b686f683-cc71-477e-be90-a8b7bbe47473" />
-
-
-
-    8.<img width="940" height="1072" alt="image" src="https://github.com/user-attachments/assets/9c0f756b-7a13-4736-a523-677e040bf189" />
-
-9. <img width="940" height="1070" alt="image" src="https://github.com/user-attachments/assets/a6d70eba-720a-48e0-a4c9-79f1f360513d" />
-
-10 <img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/f8f90b85-fbda-420d-b6bc-fee434b2928c" />
-
-11.   <img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/a58330b0-b2d7-4987-8fa5-83ff7b50e02f" />
-
-12.<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/7319227c-0851-4251-b84f-ae8aeb181821" />
-
-13. <img width="755" height="703" alt="image" src="https://github.com/user-attachments/assets/3c9927c9-c10e-4f56-8fa0-032a4dbcf264" />
-
-14.  <img width="773" height="717" alt="image" src="https://github.com/user-attachments/assets/ce4ceab3-7776-4ddd-a132-9ba0faa5dc82" />
-
-15.<img width="793" height="724" alt="image" src="https://github.com/user-attachments/assets/997ceda3-a84e-41a1-8bd0-5da44c6f7f3b" />
-
-16. <img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/ccb873cf-1cdf-49b0-abf8-5d32b3255124" />
-
-17. <img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/294d9405-4dee-4bea-814e-0934ab153b47" />
-
-18. <img width="940" height="990" alt="image" src="https://github.com/user-attachments/assets/95e3158f-0f43-4132-9b69-a208ea2359c8" />
-
-19. <img width="940" height="877" alt="image" src="https://github.com/user-attachments/assets/5e8183fc-1888-4926-a9b9-148ca9bc8a6f" />
-
-20. <img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/e25c5c7a-74b8-4a4c-8fcb-393de449b034" />
-
-21.<img width="940" height="921" alt="image" src="https://github.com/user-attachments/assets/029c056c-67ea-4212-bab5-59023ef295df" />
-
-22.<img width="940" height="956" alt="image" src="https://github.com/user-attachments/assets/8f1009c7-329d-4cc5-9679-04381c74a347" />
-
-23.  <img width="940" height="594" alt="image" src="https://github.com/user-attachments/assets/f85ca21d-4143-4ad9-96bc-fc942f13bd7d" />
-
-24.<img width="940" height="726" alt="image" src="https://github.com/user-attachments/assets/7c845fb4-2b54-48ed-b33c-91308795acf5" />
-
-25.  <img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/e814b26e-292f-40b6-ac55-873aa3a3b609" />
-    26.<img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/4688dd93-1320-4f46-9c39-55cbf2ba99ef" />
-   27. <img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/db5cc4de-615c-4556-adf1-90050b0146ad" />
-   28. <img width="940" height="983" alt="image" src="https://github.com/user-attachments/assets/b008aae0-6315-43fb-aec5-428924129a95" />
-  29.  <img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/afd9c516-1656-49c6-aa24-37098e306c2b" />
-   30. <img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/289b7192-6be1-499e-b74d-9f94f1ee31a8" />
-   31. <img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/1536581c-e544-4eef-9ab0-08a044868945" />
-   32. <img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/d119c3d0-1349-4fd8-91cc-5ad4d490dcfc" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+4. InfluxDB 16 17 18 19 
+   
+5. Grafana 20 21 22 23 24 25 26 
     
+6. Flask API 27 28 
+    
+7. Frontend + Nginx  29 30 
+    
+8. Telegram Alert 31 32
+    
+9. Backup & Restore 33
     
 
-
+    
