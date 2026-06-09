@@ -279,3 +279,6 @@ volumes:
 
     - Khôi phục hệ thống từ bản sao lưu
       <img width="940" height="529" alt="image" src="https://github.com/user-attachments/assets/961c32c9-bd12-47f6-8b32-6be462f2014c" />
+
+      <img width="654" height="1454" alt="image" src="https://github.com/user-attachments/assets/cdf8960a-2c0d-4cc1-8c3a-5bca3662973a" />
+
